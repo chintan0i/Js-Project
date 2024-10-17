@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Project</title>
+</head>
+<body>
+    <h3>Q1</h3>
+    <p id="p"></p><br></br>
+
+    <h3>Q2</h3>
+    <input type="number" id="sqr" placeholder="Give a number">
+    <button onclick="square()">Square</button>
+    <p id="q"></p><br></br>
+
+    <h3>Q3</h3>
+    <p id="r"></p><br></br>
+
+    <h3>Q4</h3>
+    <p id="s"></p><br></br>
+
+    <h3>Q5</h3>
+    <p id="t"></p><br></br>
+
+    <h3>Q6</h3>
+    <p id="u"></p><br></br>
+
+    <h3>Q7</h3>
+    <input type="number" id="odev"><button onclick="eveod()">Odd/Even</button>
+    <p id="v"></p><br></br>
+
+    <h3>Q8</h3>
+    <p id="x"></p><br></br>
+
+    <!-- <h3>Q9</h3>
+    <p id="y"></p><br></br> -->
+
+    <h3>Q10</h3>
+    <p id="z">This text will get hidden as u click the below button</p>
+    
+    <button onclick="hideqs()">Chnage</button>
+
+    <h3>Q12</h3>
+    <p id="a"></p>
+
+    <script>
+        // Q1
+        var x = 5;
+        var y = x+5;
+        document.getElementById("p").innerHTML=x +'&emsp;' +y;
+
+        // Q2
+        function square(){
+            var squr = (document.getElementById("sqr").value);
+            sq = squr * squr;
+            document.getElementById("q").innerHTML=sq;
+        }
+
+        // Q3
+        const fruits = ["Apple", "Banana", "Mango"];
+        fruits.push("Pineapple");
+        fruits.unshift("Orange");
+        document.getElementById("r").innerHTML=fruits;
+
+        // Q4
+        let loop = "";
+        for(let i = 0; i<=10;i++){
+            loop+= i+"<br>";
+        }
+        document.getElementById("s").innerHTML=loop;
+
+        // Q5
+        let tex = "hello world";
+        document.getElementById("t").innerHTML=tex.toUpperCase();
+
+        // Q6
+        let car = {make:"Mahindra", model:"Bolero", year:"2023"};
+        document.getElementById("u").innerHTML = "Car manufacturer is "+car.make+ ". And it was purchased in "+car.year;
+
+        // Q7
+        function eveod(){
+            var no = parseInt(document.getElementById("odev").value);
+
+            if(no%2==0){
+                document.getElementById("v").innerHTML="The number is Even";
+            } else{
+                document.getElementById("v").innerHTML="The number is Odd";
+            }
+        }
+
+        // Q8
+        const nu = [1,2,3,4,5];
+        document.getElementById("x").innerHTML=nu.map(Math.pow);
+
+        // Q9
+        // try{
+
+        //     document.getElementById("y").innerHTML=
+        //     parseInt("This number is 303");
+        // }
+        // catch{
+        //     alert("Something is wrong");
+        // }
+
+        // Q10
+        function hideqs(){
+           document.getElementById("z").innerHTML="hgngbv"
+               
+            }
+        
+        
+        const sd = [1,2,2,3,5,7,4,8,9,7,6,];
+        document.getElementById("a").innerHTML = sd.filter(fivegrt);
+
+        function fivegrt(morefive){
+            return morefive >=5;
+        }
+
+
+    </script>
+</body>
+</html>
